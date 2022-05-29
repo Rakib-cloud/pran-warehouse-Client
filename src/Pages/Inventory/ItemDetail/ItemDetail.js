@@ -11,7 +11,7 @@ const ItemDetail = () => {
 
   //fetching a single item
   useEffect(() => {
-    fetch(`https://pran-dealer-inventory.herokuapp.com/inventory/${itemId}`)
+    fetch(`http://localhost:5000/inventory/${itemId}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
   });

@@ -17,7 +17,7 @@ const AddItem = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("https://pran-dealer-inventory.herokuapp.com/inventory", {
+    fetch("http://localhost:5000/inventory", {
       method: "POST",
       headers: {
         "content-type": "application/json",
