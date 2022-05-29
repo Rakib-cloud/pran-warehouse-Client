@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mx-5">
           <div className="d-flex align-items-center mt-3">
             <img src="https://i.ibb.co/xDZFjpY/logo.png" height="36px" alt="logo" />
-            <span className="ms-2 fs-6">PRAN Dealer Inventory</span>
+            <span className="ms-2 fs-6">PRAN RFL Best Buy Warehouse</span>
           </div>
           <div className="">
             <BsFacebook className="mx-2 " style={{width:'24px', height:'24px'}} />
