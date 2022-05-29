@@ -14,16 +14,15 @@ const Home = () => {
       <div className="mx-auto d-flex flex-column flex-lg-row gap-4 justify-content-between">
         <div className="container-fluid d-flex flex-column justify-content-center my-3 mx-3 mx-lg-0">
           <h1 className="fs-1 fw-bold">
-            Tired of{" "}
-            <span style={{ color: "tomato" }}>managing your Inventory</span> in
-            old-fashioned way?
+            Are you {" "}
+            <span style={{ color: "tomato" }}> Manage Inventory </span> with the best way?
           </h1>
           <p>
-            We present to you the coolest inventory management web app, where
-            you can manage your inventory products. You can add and delete
-            products to your inventory, also can update the stocks of an item
-            with ease. Stocks will be calculated automatically based on your
-            delivery.{" "}
+          We offer to you the greatest stock management web software, which allows you to keep track of your goods. You can add and remove products from your inventory, as well as update an item's stock levels.
+
+without difficulties Stocks will be estimated dynamically depending on the information you provide.
+
+delivery.{" "}
           </p>
         </div>
         <div

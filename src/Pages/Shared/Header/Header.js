@@ -34,7 +34,7 @@ const Header = () => {
                 height="30"
                 className="d-inline-block align-top"
               />{" "}
-              <span style={{ color: "tomato" }}>PRAN DEALER INVENTORY</span>
+              <span style={{ color: "tomato" }}>PRAN Warehouse</span>
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
