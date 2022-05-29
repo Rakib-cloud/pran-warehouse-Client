@@ -35,7 +35,7 @@ delivery.{" "}
                 className="img-fluid"
                 height={600}
                 width={600}
-                src={require("../../../Assets/images/chocolatebun.png")}
+                src={require("../../../Assets/images/img1.png")}
                 alt="First slide"
               />
             </Carousel.Item>
@@ -44,7 +44,7 @@ delivery.{" "}
                 className="img-fluid"
                 height={600}
                 width={600}
-                src={require("../../../Assets/images/frooto.png")}
+                src={require("../../../Assets/images/img2.jpg")}
                 alt="Second slide"
               />
             </Carousel.Item>
@@ -53,7 +53,7 @@ delivery.{" "}
                 className="img-fluid"
                 height={600}
                 width={600}
-                src={require("../../../Assets/images/potatocrackers.png")}
+                src={require("../../../Assets/images/img3.jpg")}
                 alt="Third slide"
               />
             </Carousel.Item>
