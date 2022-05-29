@@ -63,7 +63,7 @@ const Header = () => {
                   <button
                     onClick={() => signOut(auth)}
                     className="btn ms-5 text-white"
-                    style={{ backgroundColor: "tomato" }}
+                    style={{ backgroundColor: "green" }}
                   >
                     Logout
                   </button>

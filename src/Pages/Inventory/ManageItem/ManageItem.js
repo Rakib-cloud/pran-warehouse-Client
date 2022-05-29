@@ -13,22 +13,7 @@ const ManageItem = () => {
   const [items, setItems] = useAllItems();
   const navigate = useNavigate();
 
-  // const handleDelete = (id) => {
-  //   const proceed = window.confirm(
-  //     "Are you sure you want to delete this item?"
-  //   );
-  //   if (proceed) {
-  //     fetch(`https://pran-dealer-inventory.herokuapp.com/inventory/${id}`, {
-  //       method: "DELETE",
-  //     })
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         const remaining = items.filter((item) => item._id !== id);
-  //         setItems(remaining);
-  //       });
-  //   }
-  // };
-  //setting react-bootstrap modal for delete confirmation
+  
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -121,7 +106,7 @@ const ManageItem = () => {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              Are you sure you want to{" "}
+              Are you sure to delete{" "}
               <strong className="text-danger">DELETE</strong> this item?
             </Modal.Body>
             <Modal.Footer>
