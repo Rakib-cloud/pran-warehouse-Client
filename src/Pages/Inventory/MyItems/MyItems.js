@@ -4,7 +4,7 @@ import { Button, Modal } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+
 import axiosPrivate from "../../../api/axiosPrivate";
 import auth from "../../../firebase.init";
 import LoadingSpinner from "../../Shared/LoadingSpinner/LoadingSpinner";
@@ -14,23 +14,20 @@ const MyItems = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const [userItems, setUserItems] = useState([]);
-
+   console.log(userItems)
   //getting users added items only
+  const url = `http://localhost:5000/myItems/${user?.email}`;
   useEffect(() => {
     const getUserItems = async () => {
-      const url = `http://localhost:5000/myItems?email=${user?.email}`;
+      const url = `http://localhost:5000/myItems/${user?.email}`;
       try {
         const { data } = await axiosPrivate.get(url);
         setUserItems(data);
       } catch (error) {
-        if (error.response.status === 401 || error.response.status === 403) {
-          toast.error("Authorization error occurred. \nPlease Login again!", {
-            toastId: "error1",
-            bodyStyle: { textAlign: "center" },
-          });
+        
           signOut(auth);
           navigate("/login");
-        }
+        
       }
     };
     getUserItems();
@@ -43,7 +40,7 @@ const MyItems = () => {
   const handleShow = () => setShow(true);
 
   const deleteItemFromDB = (id) => {
-    fetch(`http://localhost:5000/inventory/${id}`, {
+    fetch(`https://evening-escarpment-01408.herokuapp.com/inventory/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -63,7 +60,7 @@ const MyItems = () => {
     gotoHome();
   }
 
-  if(userItems.length === 0){
+  if (userItems.length === 0) {
     return <LoadingSpinner />;
   }
 
@@ -76,7 +73,7 @@ const MyItems = () => {
         My Items
       </h2>
       <div>
-        {userItems.map((item) => (
+        {userItems?.map((item) => (
           <>
             <div className="border d-flex justify-content-between px-2 w-75 mx-auto rounded mb-1">
               <div key={item._id} className="d-flex gap-3">

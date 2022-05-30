@@ -11,7 +11,7 @@ const ItemDetail = () => {
 
   //fetching a single item
   useEffect(() => {
-    fetch(`http://localhost:5000/inventory/${itemId}`)
+    fetch(`https://evening-escarpment-01408.herokuapp.com/inventory/${itemId}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
   });
@@ -20,15 +20,15 @@ const ItemDetail = () => {
 
   //update quantity
   const updateQuantity = newQuantity => {
-    
-    fetch(`http://localhost:5000/inventory/${itemId}`, {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({ quantity: newQuantity }),
-      })
-        .then((response) => response.json())
+
+    fetch(`https://evening-escarpment-01408.herokuapp.com/inventory/${itemId}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ quantity: newQuantity }),
+    })
+      .then((response) => response.json())
   }
 
   //handle delivered update
@@ -48,7 +48,7 @@ const ItemDetail = () => {
     event.target.stock.value = "";
   }
 
-  if(!item._id) {
+  if (!item._id) {
     return <LoadingSpinner />;
   }
 
@@ -114,7 +114,7 @@ const ItemDetail = () => {
             </form>
           </div>
           <div className="">
-            <button onClick={()=> navigate("/manageInventory")}
+            <button onClick={() => navigate("/manageInventory")}
               style={{ backgroundColor: "goldenrod", color: "white" }}
               className="btn rounded border d-block mx-auto mt-4 py-3"
             >

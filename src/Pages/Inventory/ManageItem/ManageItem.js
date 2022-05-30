@@ -13,14 +13,14 @@ const ManageItem = () => {
   const [items, setItems] = useAllItems();
   const navigate = useNavigate();
 
-  
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const deleteItemFromDB = (id) => {
-    fetch(`http://localhost:5000/inventory/${id}`, {
+    fetch(`https://evening-escarpment-01408.herokuapp.com/inventory/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -40,7 +40,7 @@ const ManageItem = () => {
     gotoLogin();
   }
 
-  if(items.length === 0){
+  if (items.length === 0) {
     return <LoadingSpinner />;
   }
 

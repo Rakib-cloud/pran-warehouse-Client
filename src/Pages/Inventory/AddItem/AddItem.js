@@ -17,7 +17,7 @@ const AddItem = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/inventory", {
+    fetch("https://evening-escarpment-01408.herokuapp.com/inventory", {
       method: "POST",
       headers: {
         "content-type": "application/json",
