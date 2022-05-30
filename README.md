@@ -1,4 +1,4 @@
-# App Name: PRAN Dealer Inventory
+# App Name: Pran rfl best buy warehouse
 
 ### Description
 
@@ -6,7 +6,7 @@ It's an inventory management web application for product dealers made with React
 
 ### Live Site
 
-[Click here to see demo.](https://pran-dealer-inventory.web.app/)
+[Click here to see demo.](https://warehousemanagement-60ea7.web.app)
 
 ### Features
 
