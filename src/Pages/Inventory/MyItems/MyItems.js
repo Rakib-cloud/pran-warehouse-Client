@@ -14,15 +14,15 @@ const MyItems = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const [userItems, setUserItems] = useState([]);
-   console.log(userItems)
+   
   //getting users added items only
-  const url = `http://localhost:5000/myItems/${user?.email}`;
+  
   useEffect(() => {
     const getUserItems = async () => {
       const url = `http://localhost:5000/myItems/${user?.email}`;
       try {
         const { data } = await axiosPrivate.get(url);
-        setUserItems(data);
+        console.log(data);
       } catch (error) {
         
           signOut(auth);
