@@ -19,7 +19,7 @@ const MyItems = () => {
   
   useEffect(() => {
     const getUserItems = async () => {
-      const url = `http://localhost:5000/myItems/${user?.email}`;
+      const url = `https://evening-escarpment-01408.herokuapp.com/myItems/${user?.email}`;
       try {
         const { data } = await axiosPrivate.get(url);
         console.log(data);
